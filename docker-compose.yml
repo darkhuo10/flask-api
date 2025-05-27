@@ -1,0 +1,76 @@
+version: "3"
+services:
+  mariadb:
+    image: mariadb
+    container_name: mariadba7
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root+123
+      MARIADB_DATABASE: restaurant
+      MARIADB_AUTO_UPGRADE: 1
+      
+    healthcheck:
+      test: ["CMD","healthcheck.sh","--connect","--innodb_initialized"]
+      start_period: 1m
+      interval: 1m
+      timeout: 5s
+      retries: 3
+    volumes:
+    #  - ./mariadb_data:/var/lib/mysql:rw
+      - ./APIRest/database/restaurant.sql:/docker-entrypoint-initdb.d/restaurant.sql:ro
+    user: mysql
+    networks:
+      - backend
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmina7
+    restart: always
+    environment:
+      - PMA_HOST=mariadb
+    ports:
+      - 7007:80
+    depends_on:
+      - mariadb
+    networks:
+      - backend
+
+  python:
+    build: 
+      context: .
+      dockerfile: app/Dockerfile
+    container_name: pythona7
+    #ports:
+    #  - "8080:8080"
+    environment:
+      PYTHONUNBUFFERED: 1
+      DB_USERNAME: root
+      DB_PASSWORD: root+123
+      DB_DATABASE: restaurant
+      DB_HOST: mariadb
+      DB_PORT: 3306
+      PORT: 8080
+      HOST: 0.0.0.0
+      SECRET_KEY: 'you-will-never-guess'
+      DEBUG: 'false'
+    depends_on:
+      - mariadb
+    networks:
+      - backend
+    volumes:
+      - ./logapi/:/app/logs
+
+  apache:
+    build: ./apache
+    container_name: apachea7
+    ports:
+      - 6007:80
+    volumes:
+      - ./WebClient:/var/www/html
+    depends_on:
+      - python
+    networks:
+      - backend
+
+networks:
+  backend:
