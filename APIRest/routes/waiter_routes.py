@@ -17,7 +17,7 @@ def register_user():
             profile = sanitize_input(login_json['profile'])
             email = sanitize_input(login_json['email'])
             if isinstance(username, str) and isinstance(legal_name, str) and isinstance(password, str) and isinstance(profile, str) and len(username) < 50 and len(password) < 50:
-                respuesta,code= waiter_controller.register_user(username, legal_name, password, profile, email)
+                respuesta,code= waiter_controller.register_user(username, legal_name, password, email)
             else:
                 respuesta={"status":"Bad parameters"}
                 code=401
