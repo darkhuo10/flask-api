@@ -53,9 +53,9 @@ def compare_password(password_hash, password):
         return False
     
 
-def create_session(usuario, type):
+def create_session(usuario, profile):
     session["user"] = usuario
-    session["type"] = type
+    session["profile"] = profile
 
 
 def delete_session():
@@ -71,7 +71,7 @@ def user_session_validate():
         return False
 def admin_session_validate():
     try:
-        if (session["user"] and session["user"]!="" and session["type"] == "admin"):
+        if (session["user"] and session["user"]!="" and session["profile"] == "admin"):
             return True
         else:
             return False

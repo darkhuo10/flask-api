@@ -4,7 +4,6 @@ from database.database import get_dbc
 from __main__ import app
 
 def product_to_json(row):
-    #name: str, number: int, description: str, price: float, tax: float
     return {
         "id": row[0],
         "name": sanitize_input(row[1]),

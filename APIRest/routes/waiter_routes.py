@@ -1,60 +1,34 @@
-from flask import request, session, jsonify
+from flask import make_response, request, session
 import json
 from __main__ import app
+from common.functions import Encoder, delete_session, sanitize_input
 from controllers import waiter_controller
 
-def json_to_waiter(waiter_json):
-    waiter = Waiter(
-        waiter_json.get('identification'),
-        waiter_json.get('firstname'),
-        waiter_json.get('lastname1'),
-        waiter_json.get('lastname2'),
-        waiter_json.get('phone'),
-        waiter_json.get('email'),
-        waiter_json.get('username'),
-        #waiter_json.get('isadmin'),
-        waiter_json.get('password')
-        
-    )
-    return waiter
 
-'''@app.route("/waiters", methods=["GET"])
-def get_all_waiters():
-    waiters, code = waiter_controller.get_all_waiters()
-    return jsonify(waiters), code
-
-@app.route("/waiter/<id>", methods=["GET"])
-def get_waiter_by_id(id):
-    waiter, code = waiter_controller.get_waiter_by_id(id)
-    return jsonify(waiter), code'''
-
-
-@app.route("/waiter/create",methods=["POST"])
-def create_waiter():
+@app.route("/register",methods=['POST'])
+def register_user():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
-        waiter_json = request.json
-        ret,code=waiter_controller.create_waiter(json_to_waiter(waiter_json))
+        login_json = request.json
+        if "username" in login_json and "legal_name" in login_json and "password" in login_json and "profile" in login_json and "email" in login_json:
+            username = sanitize_input(login_json['username'])
+            legal_name = sanitize_input(login_json['legal_name'])
+            password = sanitize_input(login_json['password'])
+            profile = sanitize_input(login_json['profile'])
+            email = sanitize_input(login_json['email'])
+            if isinstance(username, str) and isinstance(legal_name, str) and isinstance(password, str) and isinstance(profile, str) and len(username) < 50 and len(password) < 50:
+                respuesta,code= waiter_controller.register_user(username, legal_name, password, profile, email)
+            else:
+                respuesta={"status":"Bad parameters"}
+                code=401
+        else:
+            respuesta={"status":"Bad request"}
+            code=401
     else:
-        ret={"status":"Bad request"}
+        respuesta={"status":"Bad request"}
         code=401
-    return json.dumps(ret), code
-
-'''@app.route("/waiter/delete/<id>", methods=["DELETE"])
-def delete_waiter(id):
-    ret,code=waiter_controller.delete_waiter(id)
-    return json.dumps(ret), code
-
-@app.route("/waiter/update/<id>", methods=["PUT"])
-def update_waiter(id):
-    content_type = request.headers.get('Content-Type')
-    if (content_type == 'application/json'):
-        waiter_json = request.json
-        ret,code=waiter_controller.update_waiter(json_to_waiter(waiter_json), id)
-    else:
-        ret={"status":"Bad request"}
-        code=401
-    return json.dumps(ret), code'''
+    response= make_response(json.dumps(respuesta, cls=Encoder), code)
+    return response
 
 @app.route("/login", methods=["POST"])
 def login():
@@ -74,3 +48,15 @@ def login():
         code = 401
     
     return json.dumps(ret), code
+
+@app.route("/logout",methods=['GET'])
+def logout():
+    try:
+        delete_session()
+        ret={"status":"OK"}
+        code=200
+    except:
+        ret={"status":"ERROR"}
+        code=500
+    response=make_response(json.dumps(ret),code)
+    return response

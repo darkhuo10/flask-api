@@ -8,7 +8,7 @@ CREATE TABLE waiters (
     username VARCHAR(30) NOT NULL PRIMARY KEY,
     legal_name VARCHAR(40) NOT NULL,
     email VARCHAR(50) NOT NULL,
-    type VARCHAR(20),
+    profile VARCHAR(20),
     password VARCHAR(100) NOT NULL,
     state VARCHAR(20) NOT NULL,
     access_date DATE,
@@ -27,8 +27,8 @@ CREATE TABLE products (
     tax INT NOT NULL
 );
 -- Insertar datos de prueba en la tabla de CAMAREROS (waiters)
-INSERT INTO waiters (username, legal_name, email type password, state , login_errors) VALUES
-    ('admin', 'Nombre Apellidos', 'admin@admin.test', 'admin', '$2b$10$bmRewuyQ57fOW3v9YHQuZe8TpqUA5BBC7D864QpY/DJLXSKbP.W7i', 'active', 0)
+INSERT INTO waiters (username, legal_name, email, profile, password, state , login_errors) VALUES
+    ('admin', 'Nombre Apellidos', 'admin@admin.test', 'admin', '$2b$10$bmRewuyQ57fOW3v9YHQuZe8TpqUA5BBC7D864QpY/DJLXSKbP.W7i', 'active', 0);
 
 -- Insertar datos de prueba en la tabla de PRODUCTOS (products)
 INSERT INTO products (name, description, number, price, tax) VALUES
