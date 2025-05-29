@@ -1,0 +1,105 @@
+[2025-05-29 08:50:02,457] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2025-05-29 08:50:02,457] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-29 08:51:19,670] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2025-05-29 08:51:19,670] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-29 08:53:48,181] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.21.0.3:8080
+[2025-05-29 08:53:48,181] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-29 08:55:12,949] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.21.0.5
+[2025-05-29 08:55:12,950] INFO in _internal: 172.21.0.5 - - [29/May/2025 08:55:12] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2025-05-29 08:55:24,860] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.21.0.5
+[2025-05-29 08:55:24,860] INFO in _internal: 172.21.0.5 - - [29/May/2025 08:55:24] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 08:55:34,468] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.21.0.5
+[2025-05-29 08:55:34,469] INFO in _internal: 172.21.0.5 - - [29/May/2025 08:55:34] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 08:59:13,914] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-05-29 08:59:13,914] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-29 09:00:55,650] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:00:55,651] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:00:55] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:03:25,249] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:03:25,250] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:03:25] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:04:28,232] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-05-29 09:04:28,233] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-29 09:04:58,313] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:04:58,314] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:04:58] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:05:25,262] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:05:25,263] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:05:25] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:07:48,528] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-05-29 09:07:48,528] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-29 09:08:21,216] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:08:21,217] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:08:21] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:08:23,182] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:08:23,182] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:08:23] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:10:16,280] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-05-29 09:10:16,280] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-29 09:41:57,476] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:41:57,477] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:41:57] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:41:59,033] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:41:59,034] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:41:59] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:44:54,908] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-05-29 09:44:54,908] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-29 09:45:35,617] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:45:35,618] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:45:35] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:45:40,310] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:45:40,311] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:45:40] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:45:40,561] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:45:40,561] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:45:40] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:45:40,721] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:45:40,721] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:45:40] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:45:40,890] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:45:40,890] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:45:40] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:53:25,600] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-05-29 09:53:25,600] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-29 09:53:52,927] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.22.0.5
+[2025-05-29 09:53:52,928] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:53:52] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2025-05-29 09:54:08,493] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:54:08,494] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:54:08] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:54:09,357] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:54:09,358] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:54:09] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:54:09,517] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:54:09,517] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:54:09] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:54:09,661] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:54:09,661] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:54:09] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 09:55:45,010] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-05-29 09:55:45,010] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-29 09:56:30,029] INFO in app: path: /register | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.22.0.5
+[2025-05-29 09:56:30,030] INFO in _internal: 172.22.0.5 - - [29/May/2025 09:56:30] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2025-05-29 10:09:07,044] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-05-29 10:09:07,044] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-05-29 10:09:53,289] INFO in app: path: /registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.22.0.5
+[2025-05-29 10:09:53,289] INFO in _internal: 172.22.0.5 - - [29/May/2025 10:09:53] "[35m[1mPOST /registro HTTP/1.1[0m" 500 -
+[2025-05-29 10:10:50,025] INFO in app: path: /registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.22.0.5
+[2025-05-29 10:10:50,026] INFO in _internal: 172.22.0.5 - - [29/May/2025 10:10:50] "[35m[1mPOST /registro HTTP/1.1[0m" 500 -
+[2025-05-29 10:12:32,562] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.22.0.5
+[2025-05-29 10:12:32,563] INFO in _internal: 172.22.0.5 - - [29/May/2025 10:12:32] "[35m[1mPOST /login HTTP/1.1[0m" 500 -

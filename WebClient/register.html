@@ -19,7 +19,6 @@
             document.getElementsByClassName("error")[0].style.display="none";
             var raw = JSON.stringify({
                 "username": document.getElementById("username").value,
-                "legal_name": document.getElementById("legal_name").value,
                 "password": document.getElementById("password").value,
                 "email": document.getElementById("email").value,
                 "profile": document.getElementById("profile").value
@@ -31,7 +30,7 @@
                 body: raw
             };
 
-            fetch("/api/register", requestOptions)
+            fetch("/api/registro", requestOptions)
                 .then(response => response.json())
                 .then(result => {
                     if (result.status=="OK"){
@@ -48,7 +47,6 @@
 <body>
     <h1>REGISTRO DEL SISTEMA</h1>
     <label>Usuario</label><input type="text" name="username" id="username" required><br>
-    <label>Nombre</label><input type="text" name="legal_name" id="legal_name" required><br>
     <label>Clave</label><input type="password" name="password" id="password" required><br>
     <label>Correo</label><input type="email" name="email" id="email" required><br>
     <label>Perfil</label><input type="text" disabled name="profile" id="profile" value="user"><br>

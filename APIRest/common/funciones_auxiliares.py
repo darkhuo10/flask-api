@@ -56,7 +56,7 @@ def create_session(usuario,perfil):
     session["perfil"]=perfil
 def delete_session():
     session.clear()
-def user_session_validate():
+def validar_session_normal():
     try:
         if (session["usuario"] and session["usuario"]!=""):
             return True
@@ -64,7 +64,7 @@ def user_session_validate():
             return False
     except:
         return False
-def admin_session_validate():
+def validar_session_admin():
     try:
         if (session["usuario"] and session["usuario"]!="" and session["perfil"]=="admin"):
             return True

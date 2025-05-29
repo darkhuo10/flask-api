@@ -3,7 +3,7 @@ import json
 import decimal
 from __main__ import app
 from controllers import product_controller
-from common.functions import Encoder, sanitize_input, prepare_response_extra_headers,admin_session_validate,user_session_validate
+from common.functions import Encoder, sanitize_input, prepare_response_extra_headers, admin_session_validate, user_session_validate
 
 @app.route("/products",methods=["GET"])
 def get_all_products():
