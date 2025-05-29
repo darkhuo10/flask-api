@@ -64,10 +64,10 @@ extra_headers=prepare_response_extra_headers(True)
 def afterRequest(response):
     response.headers['Server'] = 'API'
     app.logger.info(
-        "path: %s | method: %s | status: %s | size: %s >>> %s",
+        "path: %s | method: %s | activity: %s | size: %s >>> %s",
         request.path,
         request.method,
-        response.status,
+        response.activity,
         response.content_length,
         request.remote_addr,
     )

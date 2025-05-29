@@ -1,10 +1,9 @@
 from __future__ import print_function
 from __main__ import app
-from flask import request,make_response
+from flask import request, make_response
 import json
-import sys
-from common.functions import Encoder, sanitize_input,delete_session
-from APIRest.controllers import user_controller
+from common.functions import Encoder, sanitize_input, delete_session
+from controllers import user_controller
 
 @app.route("/login",methods=['POST'])
 def login():
@@ -17,13 +16,13 @@ def login():
             if isinstance(username, str) and isinstance(password, str) and len(username) < 50 and len(password) < 50:
                 respuesta,code= user_controller.login_usuario(username,password)
             else:
-                respuesta={"status":"Bad parameters"}
+                respuesta={"activity":"Bad parameters"}
                 code=401
         else:
-            respuesta={"status":"Bad request"}
+            respuesta={"activity":"Bad request"}
             code=401
     else:
-        respuesta={"status":"Bad request"}
+        respuesta={"activity":"Bad request"}
         code=401
     response= make_response(json.dumps(respuesta, cls=Encoder), code)
     return response
@@ -41,13 +40,13 @@ def registro():
             if isinstance(username, str) and isinstance(password, str) and isinstance(profile, str) and len(username) < 50 and len(password) < 50:
                 respuesta,code= user_controller.alta_usuario(username,password,profile,email)
             else:
-                respuesta={"status":"Bad parameters"}
+                respuesta={"activity":"Bad parameters"}
                 code=401
         else:
-            respuesta={"status":"Bad request"}
+            respuesta={"activity":"Bad request"}
             code=401
     else:
-        respuesta={"status":"Bad request"}
+        respuesta={"activity":"Bad request"}
         code=401
     response= make_response(json.dumps(respuesta, cls=Encoder), code)
     return response
@@ -57,10 +56,10 @@ def registro():
 def logout():
     try:
         delete_session()
-        ret={"status":"OK"}
+        ret={"activity":"OK"}
         code=200
     except:
-        ret={"status":"ERROR"}
+        ret={"activity":"ERROR"}
         code=500
     response=make_response(json.dumps(ret),code)
     return response

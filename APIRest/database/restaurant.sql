@@ -14,23 +14,19 @@ CREATE TABLE products (
 );
 
 
-CREATE TABLE usuarios(
-	usuario VARCHAR(100) NOT NULL PRIMARY KEY,
-    clave VARCHAR(255) NOT NULL,
-    perfil VARCHAR(100) NOT NULL,
-    estado VARCHAR(20) NOT NULL,
-    correo VARCHAR(255) NOT NULL,
-    fechaUltimoAcceso DATE,
-    fechaBloqueo DATE,
-    numeroAccesosErroneo INTEGER,
-    debeCambiarClave BOOLEAN
+CREATE TABLE users(
+	user VARCHAR(100) NOT NULL PRIMARY KEY,
+    passwd VARCHAR(255) NOT NULL,
+    role VARCHAR(100) NOT NULL,
+    activity VARCHAR(20) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    last_login DATE,
+    block_date DATE,
+    login_errors INTEGER,
+    change_passwd BOOLEAN
 );
-INSERT INTO `usuarios` (`usuario`, `clave`, `perfil`,`estado`, `correo`,`numeroAccesosErroneo`,`fechaUltimoAcceso`) VALUES ('root','$2b$10$hJtLt4u0SqSf.h3S5Uuev.nu98ARhn.6SpvFCYbc1eeynJmy81cmK', 'admin', 'activo','root@pp.es', 0, '2022-03-01 00:00');
+INSERT INTO `users` (`user`, `passwd`, `role`,`activity`, `email`,`login_errors`,`last_login`) VALUES ('root','$2b$10$hJtLt4u0SqSf.h3S5Uuev.nu98ARhn.6SpvFCYbc1eeynJmy81cmK', 'admin', 'activo','root@pp.es', 0, '2022-03-01 00:00');
 
-
--- Insertar datos de prueba en la tabla de CAMAREROS (waiters)
-INSERT INTO waiters (username, email, profile, password, state , login_errors) VALUES
-    ('admin', 'admin@admin.test', 'admin', '$2b$10$bmRewuyQ57fOW3v9YHQuZe8TpqUA5BBC7D864QpY/DJLXSKbP.W7i', 'active', 0);
 
 -- Insertar datos de prueba en la tabla de PRODUCTOS (products)
 INSERT INTO products (name, description, number, price, tax) VALUES

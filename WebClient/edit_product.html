@@ -138,7 +138,7 @@
             })
             .then(response => response.json())
             .then(result => {
-                if (result.status === "OK") {
+                if (result.activity === "OK") {
                     alert("Producto actualizado correctamente");
                     location.href = 'products.html';
                 } else {

@@ -17,11 +17,11 @@
         if (sessionStorage.getItem("csrf_token")){
             myHeaders.append("X-CSRFToken",sessionStorage.getItem("csrf_token"))
         }
-        var perfil="normal";
+        var role="normal";
         onload=function(){
-            if (sessionStorage.getItem("perfil")){
-                perfil=sessionStorage.getItem("perfil")
-                if (perfil=="admin"){
+            if (sessionStorage.getItem("role")){
+                role=sessionStorage.getItem("role")
+                if (role=="admin"){
                     document.getElementById("enlaceAgregar").classList.remove("oculto");
                 }
             } 
@@ -40,7 +40,7 @@
                         <td>${chuche.precio}</td>
                         <td>${chuche.precio}</td>
                         <td>`
-                if (perfil=="admin"){
+                if (role=="admin"){
                     texto+=`<a href="edit_product.html?id=${chuche.id}" class="button is-info">Editar</a>
                         </td>
                         <td>
@@ -62,7 +62,7 @@
             fetch("/api/products", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    if (result.status){
+                    if (result.activity){
                         location.href="index.html";
                     } else {
                         pintarChuches(result);
@@ -82,7 +82,7 @@
             fetch("/api/product/delete/"+id, requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    if (result.status == "OK"){
+                    if (result.activity == "OK"){
                         alert("Chuche eliminado")
                         pedirChuches();
                     } else {
@@ -102,7 +102,7 @@
             fetch("/api/logout", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    if (result.status == "OK"){
+                    if (result.activity == "OK"){
                         location.href="index.html";
                     } else {
                         alert("No se ha podido cerrar sesión")

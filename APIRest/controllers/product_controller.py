@@ -22,16 +22,16 @@ def create_product(name, description, number, price, tax):
                 (name, description, number, price, tax)
             )
             if cursor.rowcount == 1:
-                ret = {"status": "OK"}
+                ret = {"activity": "OK"}
             else:
-                ret = {"status": "Failure"}
+                ret = {"activity": "Failure"}
 
         conn.commit()
         conn.close()
 
     except:
         app.logger.info("Excepcion al insertar un producto")
-        ret = {"status": "Failure" }
+        ret = {"activity": "Failure" }
         code=500
     return ret,code
 
@@ -79,15 +79,15 @@ def delete_product(id):
         with conn.cursor() as cursor:
             cursor.execute("DELETE FROM products WHERE id = %s", (id))
             if cursor.rowcount == 1:
-                ret={"status": "OK" }
+                ret={"activity": "OK" }
             else:
-                ret={"status": "Failure" }
+                ret={"activity": "Failure" }
         conn.commit()
         conn.close()
         code=200
     except:
         app.logger.info("Excepcion al eliminar un producto")
-        ret = {"status": "Failure" }
+        ret = {"activity": "Failure" }
         code=500
     return ret,code
 
@@ -99,14 +99,14 @@ def update_product(id, name, description, number, price, tax):
             cursor.execute("UPDATE products SET name = %s, description = %s, number = %s, price=%s, tax= %s WHERE id = %s",
                        (name, description, number, price, tax, id))
             if cursor.rowcount == 1:
-                ret={"status": "OK" }
+                ret={"activity": "OK" }
             else:
-                ret={"status": "Failure" }
+                ret={"activity": "Failure" }
         conn.commit()
         conn.close()
         code=200
     except:
         app.logger.info("Excepcion al actualziar un producto")
-        ret = {"status": "Failure" }
+        ret = {"activity": "Failure" }
         code=500
     return ret,code

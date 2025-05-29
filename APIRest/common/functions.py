@@ -51,14 +51,14 @@ def compare_password(password_hash,password):
         return bcrypt.checkpw(password,password_hash)
     except:
         return False
-def create_session(usuario,perfil):
-    session["usuario"]=usuario
-    session["perfil"]=perfil
+def create_session(user,role):
+    session["user"]=user
+    session["role"]=role
 def delete_session():
     session.clear()
 def user_session_validate():
     try:
-        if (session["usuario"] and session["usuario"]!=""):
+        if (session["user"] and session["user"]!=""):
             return True
         else:
             return False
@@ -66,7 +66,7 @@ def user_session_validate():
         return False
 def admin_session_validate():
     try:
-        if (session["usuario"] and session["usuario"]!="" and session["perfil"]=="admin"):
+        if (session["user"] and session["user"]!="" and session["role"]=="admin"):
             return True
         else:
             return False

@@ -33,7 +33,7 @@
             fetch("/api/registro", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    if (result.status=="OK"){
+                    if (result.activity=="OK"){
                         alert("Usuario registrado correctamente");
                         location.href="index.html";
                     } else {

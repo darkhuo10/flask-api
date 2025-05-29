@@ -10,7 +10,7 @@ def get_all_products():
     if user_session_validate:
         res, code= product_controller.get_all_products()
     else:
-        res = {"status":"Forbidden"}
+        res = {"activity":"Forbidden"}
         code=403
     response= make_response(json.dumps(res, cls=Encoder), code)
     return response
@@ -23,7 +23,7 @@ def get_product_by_id(id):
     if isinstance(id, str) and len(id) < 64:
         res, code = product_controller.get_product_by_id(id)
     else:
-        res = {"status":"Forbidden"}
+        res = {"activity":"Forbidden"}
         code = 403
     response = make_response(json.dumps(res, cls=Encoder), code)
     return response
@@ -46,16 +46,16 @@ def create_product():
                 if admin_session_validate():
                     res, code = product_controller.create_product(name, description, number, price, tax)
                 else:
-                    res = {"status":"Forbidden"}
+                    res = {"activity":"Forbidden"}
                     code = 403
             else:
-                res = {"status": "Bad request"}
+                res = {"activity": "Bad request"}
                 code = 401
         else:
-            res = {"status": "Bad request"}
+            res = {"activity": "Bad request"}
             code = 401
     else:
-        res = {"status": "Bad request"}
+        res = {"activity": "Bad request"}
         code = 401
     response = make_response(json.dumps(res, cls=Encoder), code)
     return response
@@ -65,7 +65,7 @@ def delete_product(id):
     if admin_session_validate:
         res,code=product_controller.delete_product(id)
     else:
-        res = {"status": "Forbidden"}
+        res = {"activity": "Forbidden"}
         code = 403
     response = make_response(json.dumps(res, cls=Encoder), code)
     return response
@@ -90,16 +90,16 @@ def update_product():
                 if user_session_validate:
                     res, code=product_controller.update_product(id, name, description, number, price, tax)
                 else:
-                    res = {"status":"Forbidden"}
+                    res = {"activity":"Forbidden"}
                     code = 403
             else:
-                res={"status":"Bad request"}
+                res={"activity":"Bad request"}
                 code=401
         else:
-            res={"status":"Bad request"}
+            res={"activity":"Bad request"}
             code=401       
     else:
-        res={"status":"Bad request"}
+        res={"activity":"Bad request"}
         code=401
     response = make_response(json.dumps(res, cls=Encoder), code)
     return response
