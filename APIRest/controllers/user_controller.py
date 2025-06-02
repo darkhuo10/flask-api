@@ -5,74 +5,83 @@ import sys
 import datetime as dt
 from __main__ import app
 
-def login_usuario(username,passwordIn):
+import datetime as dt
+
+def login_usuario(username, passwordIn):
     try:
         conexion = get_dbc()
-        #print(cipher_password(passwordIn))
         with conexion.cursor() as cursor:
-            cursor.execute("SELECT role,passwd,login_errors FROM users WHERE activity='activo' and user = %s",(username))
+            cursor.execute(
+                "SELECT role, passwd, login_errors FROM users WHERE activity='active' and username = %s",
+                (username,)  # <-- coma para tupla
+            )
             user = cursor.fetchone()
             
             if user is None:
-                ret = {"activity": "ERROR","mensaje":"Usuario/clave erroneo" }
+                ret = {"status": "ERROR", "mensaje": "Usuario/clave erroneo"}
             else:
-                role=user[0]
-                password=user[1]
-                numAccesosErroneos=user[2]
+                role, password, login_errors = user
 
                 current_date = dt.date.today()
-                hoy=current_date.strftime('%Y-%m-%d')
+                hoy = current_date.strftime('%Y-%m-%d')
                     
-                if (compare_password(password.encode("utf-8"),passwordIn.encode("utf-8"))):
-                    ret = {"activity": "OK",
-                           "csrf_token": generate_csrf(),
-                           "role":role}
-                    app.logger.info("Acceso user %s correcto",username)
-                    create_session(username,role)
-                    numAccesosErroneos=0
-                    activity='activo'
+                if compare_password(password.encode("utf-8"), passwordIn.encode("utf-8")):
+                    ret = {
+                        "status": "OK",
+                        "csrf_token": generate_csrf(),
+                        "role": role
+                    }
+                    app.logger.info("Acceso user %s correcto", username)
+                    create_session(username, role)
+                    login_errors = 0
+                    activity = 'active'
                 else:
-                    app.logger.info("Acceso user %s incorrecto",username)
-                    numAccesosErroneos=numAccesosErroneos+1
-                    if (numAccesosErroneos>2):
-                        activity="bloqueado"
-                        app.logger.info("Usuario %s bloqueado",username)
+                    app.logger.info("Acceso user %s incorrecto", username)
+                    login_errors += 1
+                    if login_errors > 2:
+                        activity = "inactive"
+                        app.logger.info("Usuario %s inactive", username)
                     else:
-                        activity='activo'
-                    ret = {"activity": "ERROR","mensaje":"Usuario/clave erroneo"}
-                cursor.execute("UPDATE users SET login_errors=%s, last_login=%s, activity=%s WHERE user = %s",(numAccesosErroneos,hoy,activity,username))
+                        activity = 'active'
+                    ret = {"status": "ERROR", "mensaje": "Usuario/clave erroneo"}
+                
+                cursor.execute(
+                    "UPDATE users SET login_errors=%s, last_login=%s, activity=%s WHERE username = %s",
+                    (login_errors, hoy, activity, username)
+                )
                 conexion.commit()
-                conexion.close()
-            code=200
-    except:
-        print("Excepcion al validar al user")   
-        ret={"activity":"ERROR"}
-        code=500
-    return ret,code
+            conexion.close()
+            code = 200
+    except Exception as e:
+        print(f"Excepción al validar al user: {e}")   
+        ret = {"status": "ERROR"}
+        code = 500
+    return ret, code
 
-def alta_usuario(username,password,role,email):
+
+def register_user(username,password,role,email):
     try:
         conexion = get_dbc()
         with conexion.cursor() as cursor:
-            cursor.execute("SELECT role FROM users WHERE user = %s",(username,))
+            cursor.execute("SELECT role FROM users WHERE username = %s",(username,))
             user = cursor.fetchone()
             if user is None:
                 passwordC=cipher_password(password)
-                cursor.execute("INSERT INTO users(user,passwd,email,role,activity,login_errors) VALUES(%s,%s,%s,'normal','activo',0)",(username,passwordC,email))
+                cursor.execute("INSERT INTO users(username,passwd,email,role,activity,login_errors) VALUES(%s,%s,%s,'user','active',0)",(username,passwordC,email))
                 if cursor.rowcount == 1:
                     conexion.commit()
                     app.logger.info("Nuevo user creado")
-                    ret={"activity": "OK" }
+                    ret={"status": "OK" }
                     code=200
                 else:
-                    ret={"activity": "ERROR" }
+                    ret={"status": "ERROR" }
                     code=500
             else:
-                ret = {"activity": "ERROR","mensaje":"Usuario ya existe" }
+                ret = {"status": "ERROR","mensaje":"Usuario ya existe" }
                 code=200
         conexion.close()
     except:
         print("Excepcion al registrar al user")   
-        ret={"activity":"ERROR"}
+        ret={"status":"ERROR"}
         code=500
     return ret,code    

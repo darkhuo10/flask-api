@@ -1,6 +1,9 @@
 -- Crear base de datos
 DROP DATABASE IF EXISTS restaurant;
 CREATE DATABASE restaurant;
+CREATE USER 'user'@'%' IDENTIFIED BY 'user+123';
+GRANT ALL PRIVILEGES ON restaurant.* TO 'user'@'%';
+FLUSH PRIVILEGES;
 USE restaurant;
 
 -- Tabla PRODUCTOS
@@ -15,7 +18,7 @@ CREATE TABLE products (
 
 
 CREATE TABLE users(
-	user VARCHAR(100) NOT NULL PRIMARY KEY,
+	username VARCHAR(100) NOT NULL PRIMARY KEY,
     passwd VARCHAR(255) NOT NULL,
     role VARCHAR(100) NOT NULL,
     activity VARCHAR(20) NOT NULL,
@@ -25,7 +28,8 @@ CREATE TABLE users(
     login_errors INTEGER,
     change_passwd BOOLEAN
 );
-INSERT INTO `users` (`user`, `passwd`, `role`,`activity`, `email`,`login_errors`,`last_login`) VALUES ('root','$2b$10$hJtLt4u0SqSf.h3S5Uuev.nu98ARhn.6SpvFCYbc1eeynJmy81cmK', 'admin', 'activo','root@pp.es', 0, '2022-03-01 00:00');
+INSERT INTO `users` (`username`, `passwd`, `role`,`activity`, `email`,`login_errors`,`last_login`) 
+VALUES ('root','$2b$10$hJtLt4u0SqSf.h3S5Uuev.nu98ARhn.6SpvFCYbc1eeynJmy81cmK', 'admin', 'active','root@pp.es', 0, '2022-03-01 00:00');
 
 
 -- Insertar datos de prueba en la tabla de PRODUCTOS (products)

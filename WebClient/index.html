@@ -1,22 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APP PEPS</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Restaurante - Login</title>
     <style>
-        .error{
-            display: none;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #0288d1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: #0277bd;
+        }
+        input {
+            width: 250px;
+            padding: 8px 10px;
+            margin-top: 5px;
+            border: 1px solid #0277bd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .error {
             color: red;
+            margin-top: 10px;
+            display: none;
+        }
+        button {
+            margin-top: 20px;
+            background-color: #0277bd;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        button:hover {
+            background-color: #01579b;
+        }
+        .actions {
+            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            font-size: 1.8em;
+            background-color: #0277bd;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 10px 0;
+            height: 50px;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        .navbar-link {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #0277bd;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+        .navbar-link:hover {
+            border: 1px solid #ffffff;
+            background-color: #ffffff;
+            color: #0277bd;
         }
     </style>
     <script>
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
-        function conectar(){
-            document.getElementsByClassName("error")[0].style.display="none";
+        function conectar() {
+            document.querySelector(".error").style.display = "none";
             var raw = JSON.stringify({
                 "username": document.getElementById("username").value,
                 "password": document.getElementById("password").value
@@ -31,24 +109,40 @@
             fetch("/api/login", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    if (result.activity=="OK"){
-                        sessionStorage.setItem("csrf_token",result.csrf_token)
-                        sessionStorage.setItem("profile",result.profile)
-                        location.href="chuches.html";
+                    if (result.status === "OK") {
+                        sessionStorage.setItem("csrf_token", result.csrf_token);
+                        sessionStorage.setItem("role", result.role);
+                        location.href = "products.html";
                     } else {
-                        document.getElementsByClassName("error")[0].style.display="block";
+                        document.querySelector(".error").style.display = "block";
                     }
                 })
-                .catch(error => console.log('error', error)); 
+                .catch(error => console.error('Error:', error));
+        }
+
+        function logout() {
+            sessionStorage.clear();
+            location.href = "index.html";
         }
     </script>
 </head>
 <body>
-    <h1>BIENVENIDO AL SISTEMA DEL PROFE</h1>
-    <label>Usuario</label><input type="text" name="username" id="username"><br>
-    <label>Clave</label><input type="password" name="password" id="password"><br>
-    <label class="error">Usuario/clave erronea</label>
-    <button type="button" onclick="conectar()">ENVIAR</button>
-    <button type="button" onclick="location.href='register.html'">REGISTRARSE</button>
+    <nav class="navbar">
+        <a href="register.html" class="navbar-link">Nuevo Usuario</a>
+    </nav>
+
+    <h1>Bienvenido al Sistema</h1>
+
+    <label for="username">Usuario</label>
+    <input type="text" id="username" name="username" autocomplete="username" />
+
+    <label for="password">Clave</label>
+    <input type="password" id="password" name="password" autocomplete="current-password" />
+
+    <label class="error">Usuario o clave errónea</label>
+
+    <div class="actions">
+        <button type="button" onclick="conectar()">Iniciar Sesión</button>
+    </div>
 </body>
 </html>

@@ -21,7 +21,7 @@
                 "username": document.getElementById("username").value,
                 "password": document.getElementById("password").value,
                 "email": document.getElementById("email").value,
-                "profile": document.getElementById("profile").value
+                "role": document.getElementById("role").value
             });
 
             var requestOptions = {
@@ -30,10 +30,10 @@
                 body: raw
             };
 
-            fetch("/api/registro", requestOptions)
+            fetch("/api/register", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    if (result.activity=="OK"){
+                    if (result.status=="OK"){
                         alert("Usuario registrado correctamente");
                         location.href="index.html";
                     } else {
@@ -49,7 +49,7 @@
     <label>Usuario</label><input type="text" name="username" id="username" required><br>
     <label>Clave</label><input type="password" name="password" id="password" required><br>
     <label>Correo</label><input type="email" name="email" id="email" required><br>
-    <label>Perfil</label><input type="text" disabled name="profile" id="profile" value="user"><br>
+    <label>Perfil</label><input type="text" disabled name="role" id="role" value="user"><br>
     <label class="error">Usuario ya existe</label>
     <button type="button" onclick="conectar()">ENVIAR</button>
 </body>

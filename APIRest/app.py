@@ -54,7 +54,7 @@ def server_error(error):
 
 @app.before_request
 def csrf_protect():
-    if not request.path.startswith("/login") and not request.path.startswith("/registro"):
+    if not request.path.startswith("/login") and not request.path.startswith("/register"):
         csrf.protect()
 
 #Configuración de la cabecera
@@ -64,10 +64,10 @@ extra_headers=prepare_response_extra_headers(True)
 def afterRequest(response):
     response.headers['Server'] = 'API'
     app.logger.info(
-        "path: %s | method: %s | activity: %s | size: %s >>> %s",
+        "path: %s | method: %s | status: %s | size: %s >>> %s",
         request.path,
         request.method,
-        response.activity,
+        response.status,
         response.content_length,
         request.remote_addr,
     )

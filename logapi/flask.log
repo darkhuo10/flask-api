@@ -103,3 +103,311 @@
 [2025-05-29 10:10:50,026] INFO in _internal: 172.22.0.5 - - [29/May/2025 10:10:50] "[35m[1mPOST /registro HTTP/1.1[0m" 500 -
 [2025-05-29 10:12:32,562] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.22.0.5
 [2025-05-29 10:12:32,563] INFO in _internal: 172.22.0.5 - - [29/May/2025 10:12:32] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2025-06-02 06:56:48,192] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.18.0.3:8080
+[2025-06-02 06:56:48,192] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-02 06:57:50,823] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1761, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1782, in finalize_request
+    response = self.process_response(response)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2275, in process_response
+    response = self.ensure_sync(func)(response)
+  File "app.py", line 70, in afterRequest
+    response.activity,
+AttributeError: 'Response' object has no attribute 'activity'
+[2025-06-02 06:57:50,824] ERROR in app: An exception occurred during a request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1761, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1782, in finalize_request
+    response = self.process_response(response)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2275, in process_response
+    response = self.ensure_sync(func)(response)
+  File "app.py", line 70, in afterRequest
+    response.activity,
+AttributeError: 'Response' object has no attribute 'activity'
+[2025-06-02 06:57:50,824] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1761, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1782, in finalize_request
+    response = self.process_response(response)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2275, in process_response
+    response = self.ensure_sync(func)(response)
+  File "app.py", line 70, in afterRequest
+    response.activity,
+AttributeError: 'Response' object has no attribute 'activity'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1782, in finalize_request
+    response = self.process_response(response)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2275, in process_response
+    response = self.ensure_sync(func)(response)
+  File "app.py", line 70, in afterRequest
+    response.activity,
+AttributeError: 'Response' object has no attribute 'activity'
+[2025-06-02 06:57:50,824] INFO in _internal: 172.18.0.5 - - [02/Jun/2025 06:57:50] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2025-06-02 07:06:27,425] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.19.0.3:8080
+[2025-06-02 07:06:27,425] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-02 07:17:45,963] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2025-06-02 07:17:45,963] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-02 07:18:51,801] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1761, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1782, in finalize_request
+    response = self.process_response(response)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2275, in process_response
+    response = self.ensure_sync(func)(response)
+  File "app.py", line 70, in afterRequest
+    response.activity,
+AttributeError: 'Response' object has no attribute 'activity'
+[2025-06-02 07:18:51,802] ERROR in app: An exception occurred during a request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1761, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1782, in finalize_request
+    response = self.process_response(response)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2275, in process_response
+    response = self.ensure_sync(func)(response)
+  File "app.py", line 70, in afterRequest
+    response.activity,
+AttributeError: 'Response' object has no attribute 'activity'
+[2025-06-02 07:18:51,802] ERROR in app: Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1761, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1782, in finalize_request
+    response = self.process_response(response)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2275, in process_response
+    response = self.ensure_sync(func)(response)
+  File "app.py", line 70, in afterRequest
+    response.activity,
+AttributeError: 'Response' object has no attribute 'activity'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1782, in finalize_request
+    response = self.process_response(response)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2275, in process_response
+    response = self.ensure_sync(func)(response)
+  File "app.py", line 70, in afterRequest
+    response.activity,
+AttributeError: 'Response' object has no attribute 'activity'
+[2025-06-02 07:18:51,802] INFO in _internal: 172.20.0.5 - - [02/Jun/2025 07:18:51] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2025-06-02 07:54:04,541] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.21.0.3:8080
+[2025-06-02 07:54:04,542] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-02 07:56:29,078] INFO in app: path: /register | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.21.0.5
+[2025-06-02 07:56:29,078] INFO in _internal: 172.21.0.5 - - [02/Jun/2025 07:56:29] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2025-06-02 07:58:13,404] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-06-02 07:58:13,404] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-02 07:58:56,602] INFO in app: path: /register | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.22.0.5
+[2025-06-02 07:58:56,602] INFO in _internal: 172.22.0.5 - - [02/Jun/2025 07:58:56] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2025-06-02 08:00:27,772] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.3:8080
+[2025-06-02 08:00:27,772] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-02 08:03:24,327] INFO in app: path: /register | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.23.0.5
+[2025-06-02 08:03:24,327] INFO in _internal: 172.23.0.5 - - [02/Jun/2025 08:03:24] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2025-06-02 08:07:29,867] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.24.0.3:8080
+[2025-06-02 08:07:29,868] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-02 08:09:28,935] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.25.0.3:8080
+[2025-06-02 08:09:28,935] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-02 08:10:50,173] INFO in app: path: /register | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.25.0.5
+[2025-06-02 08:10:50,173] INFO in _internal: 172.25.0.5 - - [02/Jun/2025 08:10:50] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2025-06-02 08:18:03,226] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.27.0.3:8080
+[2025-06-02 08:18:03,226] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-02 08:18:43,548] INFO in user_controller: Nuevo user creado
+[2025-06-02 08:18:43,548] INFO in app: path: /register | method: POST | status: 200 OK | size: 16 >>> 172.27.0.5
+[2025-06-02 08:18:43,549] INFO in _internal: 172.27.0.5 - - [02/Jun/2025 08:18:43] "POST /register HTTP/1.1" 200 -
+[2025-06-02 08:19:10,859] INFO in user_controller: Acceso user prueba correcto
+[2025-06-02 08:19:10,860] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.27.0.5
+[2025-06-02 08:19:10,860] INFO in _internal: 172.27.0.5 - - [02/Jun/2025 08:19:10] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2025-06-02 08:19:59,348] INFO in user_controller: Acceso user prueba correcto
+[2025-06-02 08:19:59,348] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.27.0.5
+[2025-06-02 08:19:59,349] INFO in _internal: 172.27.0.5 - - [02/Jun/2025 08:19:59] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2025-06-02 08:23:42,313] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.0.3:8080
+[2025-06-02 08:23:42,313] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-02 08:26:08,167] INFO in user_controller: Nuevo user creado
+[2025-06-02 08:26:08,167] INFO in app: path: /register | method: POST | status: 200 OK | size: 16 >>> 172.28.0.5
+[2025-06-02 08:26:08,168] INFO in _internal: 172.28.0.5 - - [02/Jun/2025 08:26:08] "POST /register HTTP/1.1" 200 -
+[2025-06-02 08:26:18,267] INFO in app: path: /register | method: POST | status: 200 OK | size: 51 >>> 172.28.0.5
+[2025-06-02 08:26:18,268] INFO in _internal: 172.28.0.5 - - [02/Jun/2025 08:26:18] "POST /register HTTP/1.1" 200 -
+[2025-06-02 08:26:35,397] INFO in user_controller: Acceso user p correcto
+[2025-06-02 08:26:35,430] INFO in app: path: /login | method: POST | status: 200 OK | size: 141 >>> 172.28.0.5
+[2025-06-02 08:26:35,430] INFO in _internal: 172.28.0.5 - - [02/Jun/2025 08:26:35] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:30:35,368] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.29.0.3:8080
+[2025-06-02 08:30:35,368] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-02 08:32:02,564] INFO in user_controller: Nuevo user creado
+[2025-06-02 08:32:02,564] INFO in app: path: /register | method: POST | status: 200 OK | size: 16 >>> 172.29.0.5
+[2025-06-02 08:32:02,565] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:32:02] "POST /register HTTP/1.1" 200 -
+[2025-06-02 08:32:14,386] INFO in user_controller: Acceso user p correcto
+[2025-06-02 08:32:14,411] INFO in app: path: /login | method: POST | status: 200 OK | size: 141 >>> 172.29.0.5
+[2025-06-02 08:32:14,412] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:32:14] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:34:24,088] INFO in user_controller: Acceso user p correcto
+[2025-06-02 08:34:24,088] INFO in app: path: /login | method: POST | status: 200 OK | size: 141 >>> 172.29.0.5
+[2025-06-02 08:34:24,089] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:34:24] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:34:25,274] INFO in user_controller: Acceso user p correcto
+[2025-06-02 08:34:25,275] INFO in app: path: /login | method: POST | status: 200 OK | size: 141 >>> 172.29.0.5
+[2025-06-02 08:34:25,275] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:34:25] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:34:31,043] INFO in user_controller: Acceso user p correcto
+[2025-06-02 08:34:31,044] INFO in app: path: /login | method: POST | status: 200 OK | size: 141 >>> 172.29.0.5
+[2025-06-02 08:34:31,044] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:34:31] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:34:54,734] INFO in user_controller: Acceso user p correcto
+[2025-06-02 08:34:54,735] INFO in app: path: /login | method: POST | status: 200 OK | size: 141 >>> 172.29.0.5
+[2025-06-02 08:34:54,735] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:34:54] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:34:54,938] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 08:34:54,938] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 08:34:54,938] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:34:54] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 08:38:17,042] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 08:38:17,042] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 08:38:17,042] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:38:17] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 08:40:09,093] INFO in app: path: /logout | method: GET | status: 200 OK | size: 16 >>> 172.29.0.5
+[2025-06-02 08:40:09,093] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:40:09] "GET /logout HTTP/1.1" 200 -
+[2025-06-02 08:43:31,805] INFO in user_controller: Acceso user root incorrecto
+[2025-06-02 08:43:31,828] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:43:31,829] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:43:31] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:43:37,863] INFO in user_controller: Acceso user root incorrecto
+[2025-06-02 08:43:37,890] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:43:37,890] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:43:37] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:43:42,965] INFO in user_controller: Acceso user root incorrecto
+[2025-06-02 08:43:42,965] INFO in user_controller: Usuario root bloqueado
+[2025-06-02 08:43:43,017] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:43:43,017] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:43:43] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:43:53,506] INFO in user_controller: Acceso user p incorrecto
+[2025-06-02 08:43:53,522] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:43:53,522] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:43:53] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:44:00,644] INFO in user_controller: Acceso user p incorrecto
+[2025-06-02 08:44:00,667] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:44:00,667] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:44:00] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:44:01,624] INFO in user_controller: Acceso user p incorrecto
+[2025-06-02 08:44:01,624] INFO in user_controller: Usuario p bloqueado
+[2025-06-02 08:44:01,642] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:44:01,643] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:44:01] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:44:01,985] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:44:01,986] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:44:01] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:44:02,353] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:44:02,354] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:44:02] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:44:02,524] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:44:02,525] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:44:02] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:44:02,693] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:44:02,693] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:44:02] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:44:02,860] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:44:02,860] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:44:02] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:54:36,425] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:54:36,425] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:54:36] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:54:46,180] INFO in user_controller: Nuevo user creado
+[2025-06-02 08:54:46,180] INFO in app: path: /register | method: POST | status: 200 OK | size: 16 >>> 172.29.0.5
+[2025-06-02 08:54:46,180] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:54:46] "POST /register HTTP/1.1" 200 -
+[2025-06-02 08:54:53,344] INFO in user_controller: Acceso user a correcto
+[2025-06-02 08:54:53,367] INFO in app: path: /login | method: POST | status: 200 OK | size: 141 >>> 172.29.0.5
+[2025-06-02 08:54:53,367] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:54:53] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:54:53,457] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 08:54:53,458] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 08:54:53,458] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:54:53] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 08:56:11,418] INFO in app: path: /logout | method: GET | status: 200 OK | size: 16 >>> 172.29.0.5
+[2025-06-02 08:56:11,419] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:56:11] "GET /logout HTTP/1.1" 200 -
+[2025-06-02 08:56:17,556] INFO in user_controller: Acceso user p incorrecto
+[2025-06-02 08:56:17,556] INFO in user_controller: Usuario p bloqueado
+[2025-06-02 08:56:17,579] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:56:17,579] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:56:17] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:56:22,820] INFO in user_controller: Acceso user root incorrecto
+[2025-06-02 08:56:22,820] INFO in user_controller: Usuario root bloqueado
+[2025-06-02 08:56:22,848] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.29.0.5
+[2025-06-02 08:56:22,849] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:56:22] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:56:29,116] INFO in user_controller: Acceso user a correcto
+[2025-06-02 08:56:29,116] INFO in app: path: /login | method: POST | status: 200 OK | size: 141 >>> 172.29.0.5
+[2025-06-02 08:56:29,117] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:56:29] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:56:29,219] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 08:56:29,220] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 08:56:29,220] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:56:29] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 08:56:42,437] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 08:56:42,438] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 08:56:42,438] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:56:42] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 08:56:51,953] INFO in user_controller: Acceso user a correcto
+[2025-06-02 08:56:51,953] INFO in app: path: /login | method: POST | status: 200 OK | size: 142 >>> 172.29.0.5
+[2025-06-02 08:56:51,954] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:56:51] "POST /login HTTP/1.1" 200 -
+[2025-06-02 08:56:52,067] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 08:56:52,067] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 08:56:52,067] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:56:52] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 08:57:00,205] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 08:57:00,206] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 08:57:00,206] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:57:00] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 08:59:13,561] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 08:59:13,561] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 08:59:13,562] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 08:59:13] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 09:02:22,069] INFO in app: path: /product/create | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.29.0.5
+[2025-06-02 09:02:22,069] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:02:22] "[31m[1mPOST /product/create HTTP/1.1[0m" 400 -
+[2025-06-02 09:02:51,619] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 09:02:51,620] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 09:02:51,620] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:02:51] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 09:04:06,677] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 09:04:06,677] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 09:04:06,677] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:04:06] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 09:04:21,245] INFO in product_controller: Excepcion al consultar un producto
+[2025-06-02 09:04:21,246] INFO in app: path: /product/1 | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 09:04:21,246] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:04:21] "[35m[1mGET /product/1 HTTP/1.1[0m" 500 -
+[2025-06-02 09:07:05,262] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 09:07:05,263] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 09:07:05,263] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:07:05] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 09:07:33,302] INFO in product_controller: Excepcion al consultar un producto
+[2025-06-02 09:07:33,303] INFO in app: path: /product/1 | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 09:07:33,303] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:07:33] "[35m[1mGET /product/1 HTTP/1.1[0m" 500 -
+[2025-06-02 09:07:34,219] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 09:07:34,220] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 09:07:34,220] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:07:34] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 09:08:18,627] INFO in product_controller: Excepcion al consultar un producto
+[2025-06-02 09:08:18,627] INFO in app: path: /product/1 | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 09:08:18,628] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:08:18] "[35m[1mGET /product/1 HTTP/1.1[0m" 500 -
+[2025-06-02 09:08:22,767] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-02 09:08:22,767] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.29.0.5
+[2025-06-02 09:08:22,768] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:08:22] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-02 09:09:02,268] INFO in app: path: /product/create | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.29.0.5
+[2025-06-02 09:09:02,269] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:09:02] "[31m[1mPOST /product/create HTTP/1.1[0m" 400 -
