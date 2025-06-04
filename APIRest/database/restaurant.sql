@@ -10,7 +10,7 @@ USE restaurant;
 CREATE TABLE products (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    description VARCHAR(255),
+    description VARCHAR(255) NOT NULL,
     number INT NOT NULL,
     price DECIMAL(10,2) NOT NULL,
     tax INT NOT NULL
@@ -29,7 +29,7 @@ CREATE TABLE users(
     change_passwd BOOLEAN
 );
 INSERT INTO `users` (`username`, `passwd`, `role`,`activity`, `email`,`login_errors`,`last_login`) 
-VALUES ('root','$2b$10$hJtLt4u0SqSf.h3S5Uuev.nu98ARhn.6SpvFCYbc1eeynJmy81cmK', 'admin', 'active','root@pp.es', 0, '2022-03-01 00:00');
+VALUES ('prueba','$2b$10$pkQRT4kV1j6nag3/z90R9u2pLCDo8Eyyp0KGk2Sr9.D6H48/17QZK', 'admin', 'active','test@test.com', 0, '2022-03-01 00:00');
 
 
 -- Insertar datos de prueba en la tabla de PRODUCTOS (products)

@@ -12,9 +12,10 @@ class Encoder(json.JSONEncoder):
         if isinstance(obj, decimal.Decimal): return float(obj)
 
 def sanitize_input(user_input):
-    # Usamos bleach para eliminar etiquetas HTML no deseadas
-    escaped_input = html.escape(user_input)
-    return bleach.clean(escaped_input)
+    if user_input is None:
+        return ""
+    return bleach.clean(html.escape(str(user_input)))
+
 
 def prepare_response_extra_headers(include_security_headers):
 

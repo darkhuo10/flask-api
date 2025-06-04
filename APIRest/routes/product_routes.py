@@ -7,7 +7,7 @@ from common.functions import Encoder, sanitize_input, prepare_response_extra_hea
 
 @app.route("/products",methods=["GET"])
 def get_all_products():
-    if user_session_validate:
+    if user_session_validate():
         res, code= product_controller.get_all_products()
     else:
         res = {"status":"Forbidden"}
@@ -33,7 +33,7 @@ def create_product():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         product_json = request.json
-        if "name" in product_json and "dsescription" in product_json and "number" in product_json and "price" in product_json and "tax" in product_json:
+        if "name" in product_json and "description" in product_json and "number" in product_json and "price" in product_json and "tax" in product_json:
             name = sanitize_input(product_json["name"])
             description = sanitize_input(product_json["description"])
             number = product_json["number"]
@@ -62,7 +62,7 @@ def create_product():
 
 @app.route("/product/delete/<id>", methods=["DELETE"])
 def delete_product(id):
-    if admin_session_validate:
+    if admin_session_validate():
         res,code=product_controller.delete_product(id)
     else:
         res = {"status": "Forbidden"}
@@ -75,19 +75,19 @@ def update_product():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         product_json = request.json
-        if "id" in product_json and "name" in product_json and "dsescription" in product_json and "number" in product_json and "price" in product_json and "tax" in product_json:
+        if "id" in product_json and "name" in product_json and "description" in product_json and "number" in product_json and "price" in product_json and "tax" in product_json:
             id = product_json["id"]
             name = sanitize_input(product_json["name"])
             description = sanitize_input(product_json["description"])
             number = product_json["number"]
             price = product_json["price"]
             tax = product_json["tax"]
-            if id.isnumeric() and isinstance(name, str) and isinstance(description, str) and number.isnumeric() and tax.isnumeric()() and len(name) < 128 and len(description) < 512:
+            if id.isnumeric() and isinstance(name, str) and isinstance(description, str) and number.isnumeric() and tax.isnumeric() and len(name) < 128 and len(description) < 512:
                 id = int(id)
                 price = float(price)
                 tax = int(tax)
                 number = int(number)
-                if user_session_validate:
+                if user_session_validate():
                     res, code=product_controller.update_product(id, name, description, number, price, tax)
                 else:
                     res = {"status":"Forbidden"}

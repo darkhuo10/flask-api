@@ -411,3 +411,219 @@ AttributeError: 'Response' object has no attribute 'activity'
 [2025-06-02 09:08:22,768] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:08:22] "[35m[1mGET /products HTTP/1.1[0m" 500 -
 [2025-06-02 09:09:02,268] INFO in app: path: /product/create | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.29.0.5
 [2025-06-02 09:09:02,269] INFO in _internal: 172.29.0.5 - - [02/Jun/2025 09:09:02] "[31m[1mPOST /product/create HTTP/1.1[0m" 400 -
+[2025-06-03 08:24:34,665] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.29.0.2:8080
+[2025-06-03 08:24:34,767] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 06:35:47,443] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.29.0.2:8080
+[2025-06-04 06:35:47,514] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 06:43:55,237] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.18.0.3:8080
+[2025-06-04 06:43:55,237] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 06:44:38,587] INFO in user_controller: Acceso user root incorrecto
+[2025-06-04 06:44:38,667] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.18.0.5
+[2025-06-04 06:44:38,667] INFO in _internal: 172.18.0.5 - - [04/Jun/2025 06:44:38] "POST /login HTTP/1.1" 200 -
+[2025-06-04 06:45:38,217] INFO in user_controller: Nuevo user creado
+[2025-06-04 06:45:38,218] INFO in app: path: /register | method: POST | status: 200 OK | size: 16 >>> 172.18.0.5
+[2025-06-04 06:45:38,218] INFO in _internal: 172.18.0.5 - - [04/Jun/2025 06:45:38] "POST /register HTTP/1.1" 200 -
+[2025-06-04 06:45:46,653] INFO in user_controller: Acceso user prueba correcto
+[2025-06-04 06:45:46,681] INFO in app: path: /login | method: POST | status: 200 OK | size: 141 >>> 172.18.0.5
+[2025-06-04 06:45:46,681] INFO in _internal: 172.18.0.5 - - [04/Jun/2025 06:45:46] "POST /login HTTP/1.1" 200 -
+[2025-06-04 06:45:46,757] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 06:45:46,758] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.18.0.5
+[2025-06-04 06:45:46,758] INFO in _internal: 172.18.0.5 - - [04/Jun/2025 06:45:46] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 06:45:53,600] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 06:45:53,600] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.18.0.5
+[2025-06-04 06:45:53,600] INFO in _internal: 172.18.0.5 - - [04/Jun/2025 06:45:53] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 06:46:58,770] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 06:46:58,771] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.18.0.5
+[2025-06-04 06:46:58,771] INFO in _internal: 172.18.0.5 - - [04/Jun/2025 06:46:58] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 06:47:10,704] INFO in app: path: /product/create | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.18.0.5
+[2025-06-04 06:47:10,704] INFO in _internal: 172.18.0.5 - - [04/Jun/2025 06:47:10] "[31m[1mPOST /product/create HTTP/1.1[0m" 400 -
+[2025-06-04 06:50:07,742] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.19.0.3:8080
+[2025-06-04 06:50:07,742] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 06:51:02,020] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 06:51:02,020] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.19.0.5
+[2025-06-04 06:51:02,021] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:51:02] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 06:51:25,030] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2025-06-04 06:51:25,031] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:51:25] "POST /login HTTP/1.1" 200 -
+[2025-06-04 06:51:43,008] INFO in user_controller: Nuevo user creado
+[2025-06-04 06:51:43,008] INFO in app: path: /register | method: POST | status: 200 OK | size: 16 >>> 172.19.0.5
+[2025-06-04 06:51:43,008] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:51:43] "POST /register HTTP/1.1" 200 -
+[2025-06-04 06:52:56,009] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2025-06-04 06:52:56,009] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:52:56] "POST /login HTTP/1.1" 200 -
+[2025-06-04 06:53:01,690] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2025-06-04 06:53:01,690] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:53:01] "POST /login HTTP/1.1" 200 -
+[2025-06-04 06:53:28,058] INFO in user_controller: Nuevo user creado
+[2025-06-04 06:53:28,059] INFO in app: path: /register | method: POST | status: 200 OK | size: 16 >>> 172.19.0.5
+[2025-06-04 06:53:28,059] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:53:28] "POST /register HTTP/1.1" 200 -
+[2025-06-04 06:53:31,711] INFO in user_controller: Acceso user a correcto
+[2025-06-04 06:53:31,736] INFO in app: path: /login | method: POST | status: 200 OK | size: 141 >>> 172.19.0.5
+[2025-06-04 06:53:31,737] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:53:31] "POST /login HTTP/1.1" 200 -
+[2025-06-04 06:53:31,770] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 06:53:31,770] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.19.0.5
+[2025-06-04 06:53:31,770] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:53:31] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 06:53:34,232] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 06:53:34,232] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.19.0.5
+[2025-06-04 06:53:34,232] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:53:34] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 06:53:50,705] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 06:53:50,705] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.19.0.5
+[2025-06-04 06:53:50,706] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:53:50] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 06:53:55,204] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 06:53:55,205] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.19.0.5
+[2025-06-04 06:53:55,205] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:53:55] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 06:54:36,826] INFO in app: path: /product/create | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.19.0.5
+[2025-06-04 06:54:36,826] INFO in _internal: 172.19.0.5 - - [04/Jun/2025 06:54:36] "[31m[1mPOST /product/create HTTP/1.1[0m" 400 -
+[2025-06-04 07:08:58,890] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2025-06-04 07:08:58,890] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 07:09:31,588] INFO in user_controller: Acceso user prueba correcto
+[2025-06-04 07:09:31,637] INFO in app: path: /login | method: POST | status: 200 OK | size: 142 >>> 172.20.0.5
+[2025-06-04 07:09:31,637] INFO in _internal: 172.20.0.5 - - [04/Jun/2025 07:09:31] "POST /login HTTP/1.1" 200 -
+[2025-06-04 07:09:31,700] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 07:09:31,701] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.20.0.5
+[2025-06-04 07:09:31,701] INFO in _internal: 172.20.0.5 - - [04/Jun/2025 07:09:31] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 07:09:34,975] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 07:09:34,975] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.20.0.5
+[2025-06-04 07:09:34,975] INFO in _internal: 172.20.0.5 - - [04/Jun/2025 07:09:34] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 07:09:38,021] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 07:09:38,021] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.20.0.5
+[2025-06-04 07:09:38,022] INFO in _internal: 172.20.0.5 - - [04/Jun/2025 07:09:38] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 07:10:02,152] INFO in product_controller: Excepcion al obtener los productos
+[2025-06-04 07:10:02,152] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.20.0.5
+[2025-06-04 07:10:02,153] INFO in _internal: 172.20.0.5 - - [04/Jun/2025 07:10:02] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 07:12:44,223] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.22.0.3:8080
+[2025-06-04 07:12:44,223] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 07:14:30,189] INFO in user_controller: Acceso user prueba correcto
+[2025-06-04 07:14:30,229] INFO in app: path: /login | method: POST | status: 200 OK | size: 142 >>> 172.22.0.5
+[2025-06-04 07:14:30,230] INFO in _internal: 172.22.0.5 - - [04/Jun/2025 07:14:30] "POST /login HTTP/1.1" 200 -
+[2025-06-04 07:14:30,298] ERROR in product_controller: Excepción al obtener los productos: 'int' object has no attribute 'replace'
+[2025-06-04 07:14:30,298] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.22.0.5
+[2025-06-04 07:14:30,299] INFO in _internal: 172.22.0.5 - - [04/Jun/2025 07:14:30] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 07:14:33,960] ERROR in product_controller: Excepción al obtener los productos: 'int' object has no attribute 'replace'
+[2025-06-04 07:14:33,960] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.22.0.5
+[2025-06-04 07:14:33,961] INFO in _internal: 172.22.0.5 - - [04/Jun/2025 07:14:33] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 08:07:00,942] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.23.0.3:8080
+[2025-06-04 08:07:00,942] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 08:07:30,847] INFO in user_controller: Acceso user prueba correcto
+[2025-06-04 08:07:30,874] INFO in app: path: /login | method: POST | status: 200 OK | size: 142 >>> 172.23.0.5
+[2025-06-04 08:07:30,875] INFO in _internal: 172.23.0.5 - - [04/Jun/2025 08:07:30] "POST /login HTTP/1.1" 200 -
+[2025-06-04 08:07:30,975] ERROR in product_controller: Excepción al obtener los productos: 'int' object has no attribute 'replace'
+[2025-06-04 08:07:30,975] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.23.0.5
+[2025-06-04 08:07:30,976] INFO in _internal: 172.23.0.5 - - [04/Jun/2025 08:07:30] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 08:09:04,583] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.24.0.3:8080
+[2025-06-04 08:09:04,583] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 08:09:23,694] INFO in app: path: /products | method: GET | status: 403 FORBIDDEN | size: 23 >>> 172.24.0.5
+[2025-06-04 08:09:23,694] INFO in _internal: 172.24.0.5 - - [04/Jun/2025 08:09:23] "[31m[1mGET /products HTTP/1.1[0m" 403 -
+[2025-06-04 08:09:39,942] INFO in user_controller: Acceso user prueba correcto
+[2025-06-04 08:09:39,972] INFO in app: path: /login | method: POST | status: 200 OK | size: 142 >>> 172.24.0.5
+[2025-06-04 08:09:39,973] INFO in _internal: 172.24.0.5 - - [04/Jun/2025 08:09:39] "POST /login HTTP/1.1" 200 -
+[2025-06-04 08:09:40,099] INFO in app: path: /products | method: GET | status: 200 OK | size: 456 >>> 172.24.0.5
+[2025-06-04 08:09:40,099] INFO in _internal: 172.24.0.5 - - [04/Jun/2025 08:09:40] "GET /products HTTP/1.1" 200 -
+[2025-06-04 08:10:43,202] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.25.0.3:8080
+[2025-06-04 08:10:43,202] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 08:10:48,892] ERROR in product_controller: Excepción al obtener los productos: (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+[2025-06-04 08:10:48,893] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.25.0.5
+[2025-06-04 08:10:48,893] INFO in _internal: 172.25.0.5 - - [04/Jun/2025 08:10:48] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 08:10:49,873] ERROR in product_controller: Excepción al obtener los productos: (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+[2025-06-04 08:10:49,873] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.25.0.5
+[2025-06-04 08:10:49,874] INFO in _internal: 172.25.0.5 - - [04/Jun/2025 08:10:49] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 08:10:55,963] ERROR in product_controller: Excepción al obtener los productos: 'int' object has no attribute 'replace'
+[2025-06-04 08:10:55,963] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.25.0.5
+[2025-06-04 08:10:55,964] INFO in _internal: 172.25.0.5 - - [04/Jun/2025 08:10:55] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 08:11:03,656] INFO in app: path: /products | method: GET | status: 403 FORBIDDEN | size: 23 >>> 172.25.0.5
+[2025-06-04 08:11:03,657] INFO in _internal: 172.25.0.5 - - [04/Jun/2025 08:11:03] "[31m[1mGET /products HTTP/1.1[0m" 403 -
+[2025-06-04 08:11:13,487] INFO in user_controller: Acceso user prueba correcto
+[2025-06-04 08:11:13,528] INFO in app: path: /login | method: POST | status: 200 OK | size: 142 >>> 172.25.0.5
+[2025-06-04 08:11:13,529] INFO in _internal: 172.25.0.5 - - [04/Jun/2025 08:11:13] "POST /login HTTP/1.1" 200 -
+[2025-06-04 08:11:13,623] ERROR in product_controller: Excepción al obtener los productos: 'int' object has no attribute 'replace'
+[2025-06-04 08:11:13,623] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.25.0.5
+[2025-06-04 08:11:13,624] INFO in _internal: 172.25.0.5 - - [04/Jun/2025 08:11:13] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 08:14:39,756] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.26.0.4:8080
+[2025-06-04 08:14:39,756] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 08:16:26,101] INFO in app: path: /products | method: GET | status: 403 FORBIDDEN | size: 23 >>> 172.26.0.5
+[2025-06-04 08:16:26,102] INFO in _internal: 172.26.0.5 - - [04/Jun/2025 08:16:26] "[31m[1mGET /products HTTP/1.1[0m" 403 -
+[2025-06-04 08:16:34,314] INFO in user_controller: Acceso user prueba correcto
+[2025-06-04 08:16:34,381] INFO in app: path: /login | method: POST | status: 200 OK | size: 142 >>> 172.26.0.5
+[2025-06-04 08:16:34,382] INFO in _internal: 172.26.0.5 - - [04/Jun/2025 08:16:34] "POST /login HTTP/1.1" 200 -
+[2025-06-04 08:16:34,488] ERROR in product_controller: Excepción al obtener los productos: 'int' object has no attribute 'replace'
+[2025-06-04 08:16:34,488] INFO in app: path: /products | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.26.0.5
+[2025-06-04 08:16:34,489] INFO in _internal: 172.26.0.5 - - [04/Jun/2025 08:16:34] "[35m[1mGET /products HTTP/1.1[0m" 500 -
+[2025-06-04 08:21:04,764] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.27.0.3:8080
+[2025-06-04 08:21:04,764] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 08:22:10,170] INFO in app: path: /products | method: GET | status: 200 OK | size: 462 >>> 172.27.0.5
+[2025-06-04 08:22:10,170] INFO in _internal: 172.27.0.5 - - [04/Jun/2025 08:22:10] "GET /products HTTP/1.1" 200 -
+[2025-06-04 08:22:28,008] INFO in app: path: /product/create | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.27.0.5
+[2025-06-04 08:22:28,008] INFO in _internal: 172.27.0.5 - - [04/Jun/2025 08:22:28] "[31m[1mPOST /product/create HTTP/1.1[0m" 400 -
+[2025-06-04 08:22:42,607] INFO in app: path: /product/create | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.27.0.5
+[2025-06-04 08:22:42,607] INFO in _internal: 172.27.0.5 - - [04/Jun/2025 08:22:42] "[31m[1mPOST /product/create HTTP/1.1[0m" 400 -
+[2025-06-04 08:32:27,720] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.28.0.3:8080
+[2025-06-04 08:32:27,720] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 08:33:35,428] INFO in user_controller: Acceso user prueba incorrecto
+[2025-06-04 08:33:35,462] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.28.0.5
+[2025-06-04 08:33:35,462] INFO in _internal: 172.28.0.5 - - [04/Jun/2025 08:33:35] "POST /login HTTP/1.1" 200 -
+[2025-06-04 08:33:42,903] INFO in user_controller: Acceso user prueba correcto
+[2025-06-04 08:33:42,932] INFO in app: path: /login | method: POST | status: 200 OK | size: 142 >>> 172.28.0.5
+[2025-06-04 08:33:42,932] INFO in _internal: 172.28.0.5 - - [04/Jun/2025 08:33:42] "POST /login HTTP/1.1" 200 -
+[2025-06-04 08:33:43,008] INFO in app: path: /products | method: GET | status: 200 OK | size: 456 >>> 172.28.0.5
+[2025-06-04 08:33:43,008] INFO in _internal: 172.28.0.5 - - [04/Jun/2025 08:33:43] "GET /products HTTP/1.1" 200 -
+[2025-06-04 08:33:55,255] INFO in app: path: /product/create | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.28.0.5
+[2025-06-04 08:33:55,255] INFO in _internal: 172.28.0.5 - - [04/Jun/2025 08:33:55] "[31m[1mPOST /product/create HTTP/1.1[0m" 400 -
+[2025-06-04 08:34:50,238] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.29.0.3:8080
+[2025-06-04 08:34:50,238] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-04 08:35:13,588] INFO in app: path: /products | method: GET | status: 200 OK | size: 456 >>> 172.29.0.5
+[2025-06-04 08:35:13,588] INFO in _internal: 172.29.0.5 - - [04/Jun/2025 08:35:13] "GET /products HTTP/1.1" 200 -
+[2025-06-04 08:35:15,914] INFO in app: path: /logout | method: GET | status: 200 OK | size: 16 >>> 172.29.0.5
+[2025-06-04 08:35:15,914] INFO in _internal: 172.29.0.5 - - [04/Jun/2025 08:35:15] "GET /logout HTTP/1.1" 200 -
+[2025-06-04 08:35:23,486] INFO in user_controller: Acceso user prueba correcto
+[2025-06-04 08:35:23,550] INFO in app: path: /login | method: POST | status: 200 OK | size: 142 >>> 172.29.0.5
+[2025-06-04 08:35:23,550] INFO in _internal: 172.29.0.5 - - [04/Jun/2025 08:35:23] "POST /login HTTP/1.1" 200 -
+[2025-06-04 08:35:23,626] INFO in app: path: /products | method: GET | status: 200 OK | size: 456 >>> 172.29.0.5
+[2025-06-04 08:35:23,627] INFO in _internal: 172.29.0.5 - - [04/Jun/2025 08:35:23] "GET /products HTTP/1.1" 200 -
+[2025-06-04 08:35:39,613] INFO in app: path: /product/create | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.29.0.5
+[2025-06-04 08:35:39,613] INFO in _internal: 172.29.0.5 - - [04/Jun/2025 08:35:39] "[31m[1mPOST /product/create HTTP/1.1[0m" 400 -
+[2025-06-04 08:35:55,532] INFO in app: path: /products | method: GET | status: 200 OK | size: 456 >>> 172.29.0.5
+[2025-06-04 08:35:55,533] INFO in _internal: 172.29.0.5 - - [04/Jun/2025 08:35:55] "GET /products HTTP/1.1" 200 -
+[2025-06-04 08:35:59,615] INFO in app: path: /product/delete/1 | method: DELETE | status: 200 OK | size: 16 >>> 172.29.0.5
+[2025-06-04 08:35:59,616] INFO in _internal: 172.29.0.5 - - [04/Jun/2025 08:35:59] "DELETE /product/delete/1 HTTP/1.1" 200 -
+[2025-06-04 08:36:01,173] INFO in app: path: /products | method: GET | status: 200 OK | size: 315 >>> 172.29.0.5
+[2025-06-04 08:36:01,174] INFO in _internal: 172.29.0.5 - - [04/Jun/2025 08:36:01] "GET /products HTTP/1.1" 200 -
+[2025-06-04 08:36:02,614] INFO in app: path: /product/2 | method: GET | status: 200 OK | size: 157 >>> 172.29.0.5
+[2025-06-04 08:36:02,614] INFO in _internal: 172.29.0.5 - - [04/Jun/2025 08:36:02] "GET /product/2 HTTP/1.1" 200 -
+[2025-06-04 08:36:07,600] INFO in app: path: /product/update/2 | method: PUT | status: 400 BAD REQUEST | size: 117 >>> 172.29.0.5
+[2025-06-04 08:36:07,600] INFO in _internal: 172.29.0.5 - - [04/Jun/2025 08:36:07] "[31m[1mPUT /product/update/2 HTTP/1.1[0m" 400 -
